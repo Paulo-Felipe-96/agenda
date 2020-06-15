@@ -3,18 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <title>Agenda</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'login.css' %}">
 </head>
 <body>
 <h1>Login</h1>
     <div>
-        <form action="submit" method="POST">{% csrf_token %}
-            <label>Usuário:</label>
-            <input type="text" name="username">
-            <label>Password:</label>
-            <input type="password" name="password">
-            <button type="submit">Entrar</button>
-        </form>
-
+        <div id="modal">
+                <form action="submit" method="POST">{% csrf_token %}
+                    <label>Usuário:</label>
+                    <input type="text" name="username">
+                    <label>Password:</label>
+                    <input type="password" name="password">
+                    <button type="submit">Entrar</button>
+                </form>
+        </div>
         {% for message in messages %}
             <strong>Erro! </strong> {{ message }}
         {% endfor %}
