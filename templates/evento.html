@@ -1,7 +1,7 @@
 {% extends "model-page.html" %}
 {% block content %}
     <h2>Evento</h2>
-
+<div id="eve">
     <form action="submit" method="POST">{% csrf_token %}
         <label>Titulo</label>
         <input type="number" name="id_evento" value="{{ evento.id }}" hidden>
@@ -15,11 +15,12 @@
 
         <label>Local</label>
         <textarea name="local" cols="10" rows="1">{{ evento.local }}</textarea>
-
+        <br>
         <button type="submit">Salvar</button>
 
         <a href="/">
             <button type="button">Cancelar</button>
         </a>
     </form>
+</div>
 {% endblock %}

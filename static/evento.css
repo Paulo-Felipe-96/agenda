@@ -1,0 +1,8 @@
+body {
+    background: #f0f0f5;
+}
+
+#eve form label {
+    display: block;
+    margin-bottom: 8px;
+}
